@@ -1,0 +1,115 @@
+
+.hero-section-container{
+    position: relative;
+    background-image: url(../images/Hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    transition: background 1s;
+}
+
+.hero-section-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(233, 1, 1, 0.438), rgba(0, 76, 190, 0.411));
+}
+
+.hero-section-text {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    margin: 0;
+    padding: 20px; 
+    color: white;
+    font-size: 2rem;
+    
+}
+
+/* Home section styles */
+.home-section {
+    margin-top: 20px;
+}
+
+.home-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+
+/* Styling for the about section */
+.about-section {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.about-section > h1 {
+    color: #007BFF;
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: black;
+    border-radius: 10px;
+
+}
+
+.about-section p {
+    display: justified;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+/* Styling for the Newsletter section */
+.newsletter-section {
+    background: linear-gradient(to bottom, rgba(233, 1, 1, 0.438), rgba(0, 76, 190, 0.411));
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border: black;
+}
+
+.newsletter-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: contents;
+}
+
+/* Styling for the Subscribe form */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input {
+    width: 50%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: green;
+}
+
