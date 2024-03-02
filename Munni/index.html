@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css"> 
+
+</head>
+<body>
+    <main class="page-container">
+        <section class="header" title="Navigation">
+          <div class="logo">getmeboyfriend.com</div>
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#quality">Quality</a>
+                </li>
+                <li>
+                  <a href="#photos">Gallery</a>
+                </li>
+                <li>
+                  <a href="#single">Why i am single?</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <!-- End of Navigation -->
+
+        <section class="hero-section-container" title="Hero section">
+          <div>
+            <h1>Looking for Boyfriend?</h1>
+            <p>Search no more! Meet Priyanshu 😍</p>
+            <button id="send-proposal-btn">Send proposal</button>
+          </div>
+          <div>
+            <div>
+              <img src="./images/hero.jpg">
+            </div>
+          </div>
+        </section>
+        <!-- End of hero section -->
+
+        <section id="quality" class="top-section" title="Top Features">
+          <h1>Top Quality</h1>
+          <div class="quality-wrapper">
+            <div class="quality-card">
+              <div class="icon">
+                <img src="./images/img.jpg" alt="">
+              </div>
+              <h1>Heart of Gold</h1>
+              <p>
+                Priyanshu's compassion is limitless.
+                 He is ever-ready to support, listen, or provide 
+                a comforting embrace whenever it is needed most.
+              </p>
+            </div>
+            <div class="quality-card">
+              <div class="icon"><img src="./images/img1.jpg" alt=""></div>
+              <h1>Good Sense Of Humor</h1>
+              <p>
+                With Priyanshu, laughter is abundant. His witty humor
+                 and infectious laughter can transform even the most 
+                mundane day into a memorable adventure.
+              </p>
+            </div>
+            <div class="quality-card">
+              <div class="icon"><img src="./images/img2.jpg" alt=""></div>
+              <h1>Loyality</h1>
+              <p>
+                When you're with Priyanshu, you have a lifelong friend.
+                 He is fiercely loyal and devoted to those 
+                 he cares about, steadfastly standing
+                  by your side through all of life's ups and downs.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- End of top Quality section -->
+
+        <section id="photos" class="feature-photo" title="Feature Photo">
+          <h1>Feature Photo</h1>
+          <div class="proposal-photos">
+            <div class="grid-container">
+              <div class="grid-item">
+                <img src="./images/img3.jpg" alt="Proposal Photo 1">
+                <img src="./images/img4.jpg" alt="Proposal Photo 2">
+              </div>
+              <div class="grid-item">
+                <img src="./images/munna.jpg" alt="Proposal Photo 3">
+                <img src="./images/img5.jpg" alt="Proposal Photo 4">
+              </div>
+              <div class="grid-item">
+                <img src="./images/img6.jpg" alt="Proposal Photo 5">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Feature photo section -->
+
+        <section id="single" title="Proposal form">
+          <div class="form-container">
+            <div class="form-left-container">
+              <p>Send proposal Before he is</p>
+              <h1>Booked!</h1>
+            </div>
+            <div class="form-right-container">
+              <form action="https://formspree.io/f/xoqgwaqp"  method="post" id="proposal-form">
+                <input type="text" name="name"   placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="phone" name="phone" placeholder="Phone Number" required>
+                <textarea placeholder="Your Message" name="message" id="text" cols="30" rows="10"></textarea>
+                <button type="submit">Send Proposal</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- End of proposal form section -->
+  
+        <section title="Footer">
+          <div class="footer-container">
+            <div>
+              <h1>Get me boyfriend</h1>
+            </div>
+
+            <div>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">Blog</a>
+                  </li>
+                  <li>
+                    <a href="">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="">Copyright@2024</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </section>
+        <!-- End of Footer -->
+      </main>
+    <script>
+        // function ChangeTheme(){
+        //     var currentColor = document.documentElement.style.getPropertyValue('--primary-bg-color');
+        // var originalColor = 'var(--original-primary-bg-color)';
+        
+        // if (currentColor === originalColor) {
+        //     // If current color is original color, change to new color
+        //     document.documentElement.style.setProperty('--primary-bg-color', 'black');
+        //     document.documentElement.style.setProperty('--primary-color', 'white');
+        // } else {
+        //     // If current color is not original color, revert to original color
+        //     document.documentElement.style.setProperty('--primary-bg-color', originalColor);
+        //     document.documentElement.style.setProperty('--primary-color', 'var(--original-primary-color)');
+        // }
+        // }
+        
+      document.getElementById("send-proposal-btn").addEventListener("click", function() {
+      document.getElementById("proposal-form").querySelector("input[type='text']").focus();
+
+      document.getElementById('proposal-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+        var name = document.getElementsByName('name')[0].value;
+        var email = document.getElementsByName('email')[0].value;
+        var phone = document.getElementsByName('phone')[0].value;
+        var message = document.getElementsByName('message')[0].value;
+
+      var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if(!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+       var phoneRegex = /^\+977[0-9]{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid Nepal phone number (e.g., +977XXXXXXXXXX).');
+      return;
+      }
+      alert('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nMessage: ' + message);
+      });
+      });
+   </script>
+</body>
+</html>
